@@ -1,0 +1,216 @@
+<template>
+  <div>
+    <div class="signup-page-wrapper">
+      <div class="signup-page">
+        <div class="register-wrapper">
+          <div class="register">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="red"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V8c0-.55-.45-1-1-1s-1 .45-1 1v2H2c-.55 0-1 .45-1 1s.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1v-2h2c.55 0 1-.45 1-1s-.45-1-1-1H6zm9 4c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+            <p>Register</p>
+          </div>
+          <div class="user-identity">
+            <div class="name">
+              <p>User identity</p>
+            </div>
+            <form class="firstname">
+              <input
+                required
+                type="text"
+                id="Firstname"
+                placeholder="First name"
+              />
+              <input
+                required
+                id="lastname"
+                type="text"
+                placeholder="Last name"
+              />
+            </form>
+          </div>
+          <div class="account-info">
+            <div class="account">
+              <p>Account information</p>
+            </div>
+            <form class="account-form">
+              <div class="email-username">
+                <input
+                  required
+                  id="email"
+                  type="email"
+                  placeholder="Email address"
+                />
+                <input
+                  required
+                  id="username"
+                  type="text"
+                  placeholder="User name"
+                />
+              </div>
+              <div class="password">
+                <input
+                  required
+                  type="password"
+                  placeholder="Password"
+                />
+                <input
+                  required
+                  type="password"
+                  placeholder="Re-enter Password"
+                />
+              </div>
+            </form>
+          </div>
+          <span class="error"></span>
+          <div class="checkbox">
+            <input type="checkbox" id="two-step-verification" />
+            <label for="two-step-verification">Two-step verification</label>
+          </div>
+          <div class="links-wrapper">
+            <NuxtLink id="cancel" to="/">Cancel</NuxtLink>
+            <button  id="submit">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+}
+</script>
+
+<style>
+.signup-page-wrapper {
+  background-image: url('/irina-iriser-Vn7LOc5PE-E-unsplash.jpg');
+  height: 100vh;
+  background-position: top;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+}
+.signup-page {
+  backdrop-filter: blur(30px);
+  background-color: #32555f1a;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 4px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.65);
+  background-color: #47494e;
+}
+.register {
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+}
+.register p {
+  margin-left: 5px;
+}
+.name {
+  margin-top: 30px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+.firstname {
+  margin-top: 5px;
+}
+.firstname input {
+  border: solid 1px rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 5px;
+  border-radius: 4px;
+}
+#lastname {
+  margin-left: 10px;
+}
+.account {
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+.account-form {
+  margin-top: 15px;
+}
+.email-username {
+  margin-bottom: 10px;
+}
+.email-username input {
+  padding: 5px;
+  border: solid 1px rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 4px;
+}
+#username {
+  margin-left: 10px;
+}
+.password input {
+  padding: 5px;
+  border: solid 1px rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 4px;
+  width: 97%;
+  margin-bottom: 10px;
+}
+.checkbox {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.checkbox label {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.links-wrapper {
+  margin: 20px 0px;
+}
+.links-wrapper a {
+  border: solid 1px #fff;
+  background-color: #47494e;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 55px;
+}
+#register {
+  margin-left: 10px;
+}
+#cancel {
+  margin-left: 5px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
+#submit {
+  border: solid 1px #fff;
+  background-color: #47494e;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 55px;
+}
+</style>
